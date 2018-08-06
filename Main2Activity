@@ -1,0 +1,56 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+
+namespace MyLittleModeBook
+{
+    [Activity(Label = "Main2Activity")]
+    public class Main2Activity : Activity
+    {
+
+        public ScaleClass[] scaleDetails = new ScaleClass[5];
+        private ArrayAdapter<string> listAdapt;
+
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.Main2Activity);
+            String[] scaleNames = { "Major", "Minor", "Pentatonic", "Dorian", "Melodic Minor" };
+
+            listAdapt = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, scaleNames);
+            ListView scaleList = (ListView)FindViewById<ListView>(Resource.Id.scalelist);
+            scaleList.Adapter = listAdapt;
+            ScaleClass major = new ScaleClass("Major", "ABCD", "A major");
+            scaleDetails[0] = major;
+            ScaleClass minor = new ScaleClass("Minor", "ABCD", "A major");
+            scaleDetails[1] = minor;
+            ScaleClass pentatonic = new ScaleClass("Pentatonic", "ABCD", "A major");
+            scaleDetails[2] = pentatonic;
+            ScaleClass dorian = new ScaleClass("Dorian", "ABCD", "A major");
+            scaleDetails[3] = dorian;
+            ScaleClass mminor = new ScaleClass("Melodic Minor", "ABCD", "A minor");
+            scaleDetails[4] = mminor;
+
+            scaleList.ItemClick += ScaleList_ItemClick;
+
+
+        }
+
+        void ScaleList_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            Intent scaleAct = new Intent(this, typeof(ScaleListActivity));
+            StartActivity(scaleAct);
+        }
+
+    }
+
+}
