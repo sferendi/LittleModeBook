@@ -27,3 +27,7 @@ Licenses are stated within the licenses.txt file, and cover all media licensing 
 
 # Versioning
 Any files ending in OLD within the main repository on this page are no longer in use within the app; all current files do not have the word OLD in the name. 
+
+# Link to app file on Google Drive
+I have provided a link to the app on Google Drive below, which contains all the Visual Studio files and resources needed to run and deploy the app:
+https://drive.google.com/open?id=1YcwPmdFK0fevCnRwp2c8sUUXBYp6dMch
