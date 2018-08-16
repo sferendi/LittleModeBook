@@ -24,3 +24,6 @@ The app will work safely in both landscape and portrait mode on mobile devices.
 
 # Licensing
 Licenses are stated within the licenses.txt file, and cover all media licensing within the app. 
+
+# Versioning
+Any files ending in OLD within the main repository on this page are no longer in use within the app; all current files do not have the word OLD in the name. 
