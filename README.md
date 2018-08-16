@@ -21,3 +21,6 @@ If you wish to visit the Github for this page via the application, click on the 
 
 # Layouts
 The app will work safely in both landscape and portrait mode on mobile devices. 
+
+# Licensing
+Licenses are stated within the licenses.txt file, and cover all media licensing within the app. 
